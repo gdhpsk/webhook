@@ -42,7 +42,7 @@ function hexToBytes(hex) {
     let index = 0;
     for (let i = 0; i < hex.length; i += 2) {
         let c = hex.slice(i, i + 2);
-        let b = parseInt(c, 16);
+        let b = parseInt(c, 16); 
         bytes[index] = b;
         index += 1;
     }
