@@ -50,6 +50,10 @@ function hexToBytes(hex) {
     return bytes;
 };
 
+app.use((req, res) => {
+    console.log(req)
+})
+
 app.use(express.json({ type: 'application/json' }))
 
 app.post('/', async (req, res, next) => {
