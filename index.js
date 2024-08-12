@@ -50,7 +50,7 @@ function hexToBytes(hex) {
     return bytes;
 };
 
-app.use(express.json({ type: 'application/json' }))
+// app.use(express.json({ type: 'application/json' }))
 
 app.post('/', async (req, res, next) => {
     let verified = await verifySignature(process.env.secret, req.headers["x-hub-signature-256"], req.body)
