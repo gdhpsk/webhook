@@ -1,6 +1,7 @@
 {
     "589348424": {
         "name":  "gdmwrl",
+        "port": 3000,
         "ref": "refs/heads/main"
     }
 }
