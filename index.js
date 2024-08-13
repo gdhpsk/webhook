@@ -22,10 +22,19 @@ app.post('/', githubMiddleware, async (req, response) => {
             resolve("")
         })
     })
+
+    await new Promise((resolve, reject) => {
+        let cmd = spawn("sudo", ["npm", "run", "build"], {cwd: `/projects/${repo}`, shell: true})
+        cmd.on("exit", () => {
+            console.log(`Ran build command for ${repo}`)
+            resolve("")
+        })
+    })
+
     await new Promise((resolve, reject) => {
         let cmd = spawn("sudo", ["docker", "build", "-t", repo, "."], {cwd: `/projects/${repo}`, shell: true})
         cmd.on("exit", () => {
-            console.log(`Built ${repo}`)
+            console.log(`Built ${repo} with docker`)
             resolve("")
         })
     })
