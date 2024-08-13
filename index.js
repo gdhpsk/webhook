@@ -41,7 +41,7 @@ app.post('/', githubMiddleware, async (req, response) => {
     
     let id = await new Promise((resolve, reject) => {
     let container = spawn("sudo", ["docker", "ps", "|", "grep", `"${repo}"`, "|", "awk", "'{print $1}'"], {shell: true, cwd: "/"})
-    container.once("message", (e) => {
+    container.stdout.on("data", (e) => {
         let container = e.toString().trim()
         resolve(container)
     })
@@ -52,7 +52,7 @@ app.post('/', githubMiddleware, async (req, response) => {
     let command = await new Promise((resolve, reject) => {
         let run_cmd = `docker run --rm -v /var/run/docker.sock:/var/run/docker.sock:ro assaflavie/runlike ${id}`
         let cmd = spawn("sudo", run_cmd.split(" "), {shell: true, cwd: "/"})
-        cmd.once("message", (e) => {
+        cmd.stdout.on("data", (e) => {
             let cmd = e.toString().trim()
             resolve(cmd)
         })
