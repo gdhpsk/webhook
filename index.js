@@ -13,6 +13,8 @@ app.post('/', githubMiddleware, async (req, response) => {
     let {body} = req
     let repo = repositories[body?.repository?.id?.toString() || ""]
     if(!repo) return;
+    if(body.ref != repo.ref) return;
+    repo = repo.name
     await new Promise((resolve, reject) => {
         let cmd = spawn("sudo", ["git", "pull"], {cwd: `/projects/${repo}`})
         cmd.on("exit", () => {

@@ -1,3 +1,6 @@
 {
-    "589348424": "gdmwrl"
+    "589348424": {
+        "name":  "gdmwrl",
+        "ref": "refs/heads/main"
+    }
 }
