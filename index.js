@@ -40,8 +40,7 @@ app.post('/', githubMiddleware, async (req, response) => {
     })
     
     let id = await new Promise((resolve, reject) => {
-        let container_cmd = `docker ps | grep "${repo}" | awk '{print $1}'`
-    let container = spawn("sudo", container_cmd.split(" "), {shell: true, cwd: "/"})
+    let container = spawn("sudo", ["docker", "ps", "|", "grep", `"${repo}"`, "|", "awk", "'{print $1}'"], {shell: true, cwd: "/"})
     container.once("message", (e) => {
         let container = e.toString().trim()
         resolve(container)
