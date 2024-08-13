@@ -48,8 +48,6 @@ app.post('/', githubMiddleware, async (req, response) => {
     })
     })
 
-    console.log(id)
-
     let command = await new Promise((resolve, reject) => {
         let run_cmd = `docker run --rm -v /var/run/docker.sock:/var/run/docker.sock:ro assaflavie/runlike ${id}`
         let cmd = spawn("sudo", run_cmd.split(" "), {shell: true, cwd: "/"})
@@ -58,8 +56,6 @@ app.post('/', githubMiddleware, async (req, response) => {
             resolve(cmd)
         })
     })
-
-    console.log(command)
 
     let deploy = `docker stop ${id}; sudo docker remove ${id}; sudo ${command}`
     let cmd = spawn("sudo", deploy.split(" "), {shell: true, cwd: "/"})
