@@ -3,5 +3,57 @@
         "name":  "gdmwrl",
         "port": 3000,
         "ref": "refs/heads/main"
+    },
+    "686836868": {
+        "name": "sfh-backend",
+        "port": 3005,
+        "ref": "refs/heads/main"
+    },
+    "741741884": {
+        "name": "idl",
+        "port": 3003,
+        "ref": "refs/heads/main"
+    },
+    "700578396": {
+        "name": "backups",
+        "port": 3006,
+        "ref": "refs/heads/main"
+    },
+    "708263530": {
+        "name": "page",
+        "port": 3007,
+        "ref": "refs/heads/main"
+    },
+    "527422018": {
+        "name": "gdlrrlist",
+        "port": 3001,
+        "ref": "refs/heads/main"
+    },
+    "527410167": {
+        "name": "hrrml-bot",
+        "ref": "refs/heads/main"
+    },
+    "656892564": {
+        "name": "gdmwrl-bot",
+        "ref": "refs/heads/main"
+    },
+    "529816375": {
+        "name": "hrrml",
+        "ref": "refs/heads/main",
+        "port": 3002
+    },
+    "716790402": {
+        "name": "hpskloud",
+        "ref": "refs/heads/fs",
+        "port": 3020
+    },
+    "430248294": {
+        "name": "lrrbot",
+        "ref":"refs/heads/main"
+    },
+    "729582232": {
+        "name": "cfc",
+        "ref":"refs/heads/main",
+        "port": 3009
     }
 }
