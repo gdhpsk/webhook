@@ -55,5 +55,15 @@
         "name": "cfc",
         "ref":"refs/heads/main",
         "port": 3009
+    },
+    "729946973": {
+        "name": "mobilelist",
+        "ref": "refs/heads/master",
+        "port": 3021
+    },
+    "729953420": {
+        "name": "mobilelistbot",
+        "ref": "refs/heads/master",
+        "port": 3022
     }
 }
