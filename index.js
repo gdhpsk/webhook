@@ -25,7 +25,7 @@ app.post('/', githubMiddleware, async (req, response) => {
     })
 
     await new Promise((resolve, reject) => {
-        let cmd = spawn("sudo", ["npm", "install"], {cwd: `/projects/${repo}`, shell: true})
+        let cmd = spawn("sudo", [repo.type || "npm", "install"], {cwd: `/projects/${repo}`, shell: true})
         cmd.on("exit", () => {
             console.log(`Installed dependencies for ${repo}`)
             resolve("")
@@ -33,7 +33,7 @@ app.post('/', githubMiddleware, async (req, response) => {
     })
 
     await new Promise((resolve, reject) => {
-        let cmd = spawn("sudo", ["npm", "run", "build"], {cwd: `/projects/${repo}`, shell: true})
+        let cmd = spawn("sudo", [repo.type || "npm", "run", "build"], {cwd: `/projects/${repo}`, shell: true})
         cmd.on("exit", () => {
             console.log(`Ran build command for ${repo}`)
             resolve("")
