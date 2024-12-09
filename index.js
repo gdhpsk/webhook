@@ -15,6 +15,7 @@ app.post('/', githubMiddleware, async (req, response) => {
     if(!repo) return;
     if(body.ref != repo.ref) return;
     let port = repo.port
+    let usePort = repo.usePort
     repo = repo.name
     await new Promise((resolve, reject) => {
         let cmd = spawn("sudo", ["git", "pull"], {cwd: `/projects/${repo}`})
@@ -49,7 +50,7 @@ app.post('/', githubMiddleware, async (req, response) => {
     })
     
     let id = await new Promise((resolve, reject) => {
-    let container = spawn("sudo", ["docker", "ps", "|", "grep", `"${port ? `${port}->${port}` : repo}"`, "|", "awk", "'{print $1}'"], {shell: true, cwd: "/"})
+    let container = spawn("sudo", ["docker", "ps", "|", "grep", `"${port && usePort != false ? `${port}->${port}` : repo}"`, "|", "awk", "'{print $1}'"], {shell: true, cwd: "/"})
     container.stdout.on("data", (e) => {
         let container = e.toString().trim()
         resolve(container)
