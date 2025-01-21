@@ -13,7 +13,8 @@
     "741741884": {
         "name": "idl",
         "port": 3003,
-        "ref": "refs/heads/main"
+        "ref": "refs/heads/main",
+        "usePort": false
     },
     "700578396": {
         "name": "backups",
