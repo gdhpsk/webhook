@@ -15,8 +15,7 @@
         "name": "idl",
         "image": "insanedemonlist",
         "port": 3003,
-        "ref": "refs/heads/main",
-        "usePort": false
+        "ref": "refs/heads/main"
     },
     "700578396": {
         "name": "backups",
@@ -56,8 +55,7 @@
         "name": "hpskloud",
         "image": "hpskloud",
         "ref": "refs/heads/fs",
-        "port": 3020,
-        "usePort": false
+        "port": 3020
     },
     "430248294": {
         "name": "lrrbot",
@@ -82,7 +80,6 @@
         "image": "mobile-list-bot",
         "ref": "refs/heads/master",
         "type": "yarn",
-        "port": 3022,
-        "usePort": false
+        "port": 3022
     }
 }
