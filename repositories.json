@@ -1,72 +1,85 @@
 {
     "589348424": {
         "name":  "gdmwrl",
+        "image": "gdmwrl",
         "port": 3000,
         "ref": "refs/heads/main"
     },
     "686383596": {
         "name": "sfh-backend",
+        "image": "sfh-backend",
         "port": 3005,
-        "ref": "refs/heads/main",
-        "usePort": false
+        "ref": "refs/heads/main"
     },
     "741741884": {
         "name": "idl",
+        "image": "insanedemonlist",
         "port": 3003,
         "ref": "refs/heads/main",
         "usePort": false
     },
     "700578396": {
         "name": "backups",
+        "image": "backups",
         "port": 3006,
         "ref": "refs/heads/main"
     },
     "708263530": {
         "name": "page",
+        "image": "page",
         "port": 3007,
         "ref": "refs/heads/main"
     },
     "527422018": {
         "name": "gdlrrlist",
+        "image": "gdlrrlist",
         "port": 3001,
         "ref": "refs/heads/main"
     },
     "527410167": {
         "name": "hrrml-bot",
+        "image": "hrr-mobile-list-bot",
         "ref": "refs/heads/main"
     },
     "656892564": {
         "name": "gdmwrl-bot",
+        "image": "gdmobilewrlist-bot",
         "ref": "refs/heads/main"
     },
     "529816375": {
         "name": "hrrml",
+        "image": "hrrml",
         "ref": "refs/heads/main",
         "port": 3002
     },
     "716790402": {
         "name": "hpskloud",
+        "image": "hpskloud",
         "ref": "refs/heads/fs",
         "port": 3020,
         "usePort": false
     },
     "430248294": {
         "name": "lrrbot",
+        "image": "lrrbot",
         "ref":"refs/heads/main"
     },
     "729582232": {
         "name": "cfc",
+        "image": "cfc",
         "ref":"refs/heads/main",
         "port": 3009
     },
     "729946973": {
         "name": "mobilelist",
+        "image": "mobilelist",
         "ref": "refs/heads/master",
         "type": "yarn",
         "port": 3021
     },
     "729953420": {
         "name": "mobilelistbot",
+        "image": "mobile-list-bot",
         "ref": "refs/heads/master",
         "type": "yarn",
         "port": 3022,
