@@ -23,8 +23,8 @@
         "port": 3006,
         "ref": "refs/heads/main"
     },
-    "708263530": {
-        "name": "resume",
+    "1043854146": {
+        "name": "page",
         "image": "page",
         "port": 3007,
         "ref": "refs/heads/main"
