@@ -24,7 +24,7 @@
         "ref": "refs/heads/main"
     },
     "708263530": {
-        "name": "page",
+        "name": "resume",
         "image": "page",
         "port": 3007,
         "ref": "refs/heads/main"
